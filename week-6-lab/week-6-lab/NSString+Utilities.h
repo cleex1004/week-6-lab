@@ -15,10 +15,3 @@
 +(NSString *)reverseString: (NSString *)string;
 
 @end
-
-
-////Instance Method
-//-(void)walk;
-//
-////Class Methods
-//+(void)sayHello;

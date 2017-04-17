@@ -68,21 +68,10 @@
 		BCAF0CB21EA55B9E00995940 /* week-6-lab */ = {
 			isa = PBXGroup;
 			children = (
-				BCAF0CD71EA56EF300995940 /* PersonQueue.h */,
-				BCAF0CB61EA55B9E00995940 /* AppDelegate.h */,
-				BCAF0CCA1EA55E6B00995940 /* NSString+Utilities.h */,
-				BCAF0CCB1EA55E6B00995940 /* NSString+Utilities.m */,
-				BCAF0CCD1EA5654500995940 /* Person.h */,
-				BCAF0CCE1EA5654500995940 /* Person.m */,
-				BCAF0CD01EA5681A00995940 /* Employee.h */,
-				BCAF0CD11EA5681A00995940 /* Employee.m */,
-				BCAF0CB71EA55B9E00995940 /* AppDelegate.m */,
-				BCAF0CB91EA55B9E00995940 /* ViewController.h */,
-				BCAF0CBA1EA55B9E00995940 /* ViewController.m */,
-				BCAF0CBC1EA55B9E00995940 /* Main.storyboard */,
-				BCAF0CBF1EA55B9E00995940 /* Assets.xcassets */,
-				BCAF0CC11EA55B9E00995940 /* LaunchScreen.storyboard */,
-				BCAF0CC41EA55B9E00995940 /* Info.plist */,
+				BCAF0CD91EA56F6000995940 /* controller */,
+				BCAF0CD81EA56F4400995940 /* model */,
+				BCAF0CDA1EA56F6D00995940 /* view */,
+				BCAF0CDB1EA56F7500995940 /* supporting */,
 				BCAF0CB31EA55B9E00995940 /* Supporting Files */,
 			);
 			path = "week-6-lab";
@@ -94,6 +83,49 @@
 				BCAF0CB41EA55B9E00995940 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCAF0CD81EA56F4400995940 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF0CCA1EA55E6B00995940 /* NSString+Utilities.h */,
+				BCAF0CCB1EA55E6B00995940 /* NSString+Utilities.m */,
+				BCAF0CD71EA56EF300995940 /* PersonQueue.h */,
+				BCAF0CCD1EA5654500995940 /* Person.h */,
+				BCAF0CCE1EA5654500995940 /* Person.m */,
+				BCAF0CD01EA5681A00995940 /* Employee.h */,
+				BCAF0CD11EA5681A00995940 /* Employee.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		BCAF0CD91EA56F6000995940 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF0CB61EA55B9E00995940 /* AppDelegate.h */,
+				BCAF0CB71EA55B9E00995940 /* AppDelegate.m */,
+				BCAF0CB91EA55B9E00995940 /* ViewController.h */,
+				BCAF0CBA1EA55B9E00995940 /* ViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		BCAF0CDA1EA56F6D00995940 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF0CBC1EA55B9E00995940 /* Main.storyboard */,
+				BCAF0CC11EA55B9E00995940 /* LaunchScreen.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		BCAF0CDB1EA56F7500995940 /* supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF0CBF1EA55B9E00995940 /* Assets.xcassets */,
+				BCAF0CC41EA55B9E00995940 /* Info.plist */,
+			);
+			name = supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
