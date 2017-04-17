@@ -35,7 +35,7 @@
 		BCAF0CCE1EA5654500995940 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		BCAF0CD01EA5681A00995940 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		BCAF0CD11EA5681A00995940 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
-		BCAF0CD61EA56DA200995940 /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonQueue.h; path = ../PersonQueue.h; sourceTree = "<group>"; };
+		BCAF0CD71EA56EF300995940 /* PersonQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 		BCAF0CB21EA55B9E00995940 /* week-6-lab */ = {
 			isa = PBXGroup;
 			children = (
-				BCAF0CD61EA56DA200995940 /* PersonQueue.h */,
+				BCAF0CD71EA56EF300995940 /* PersonQueue.h */,
 				BCAF0CB61EA55B9E00995940 /* AppDelegate.h */,
 				BCAF0CCA1EA55E6B00995940 /* NSString+Utilities.h */,
 				BCAF0CCB1EA55E6B00995940 /* NSString+Utilities.m */,
