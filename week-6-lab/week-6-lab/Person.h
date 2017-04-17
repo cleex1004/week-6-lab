@@ -10,10 +10,13 @@
 
 @interface Person : NSObject
 
-@property (strong, nonatomic) NSString *firstName;
+-(NSString *)firstName;
+-(void)setFirstName:(NSString *)firstName;
 
-@property (strong, nonatomic) NSString *lastName;
+-(NSString *)lastName;
+-(void)setLastName:(NSString *)lastName;
 
-@property (strong, nonatomic) NSNumber *age;
+-(NSNumber *)age;
+-(void)setAge:(NSNumber *)age;
 
 @end

@@ -11,20 +11,14 @@
 
 @interface Employee : Person
 
-@property (strong, nonatomic) NSNumber *employeeNumber;
+-(NSNumber *)employeeNumber;
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber;
 
-@property (strong, nonatomic) NSNumber *yearsEmployed;
+-(NSNumber *)yearsEmployed;
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed;
 
-@property (strong, nonatomic) NSString *managerName;
-
-//-(NSNumber *)employeeNumber;
-//-(void)setEmployeeNumber:(NSNumber *)employeeNumber;
-//
-//-(NSNumber *)yearsEmployed;
-//-(void)setYearsEmployed:(NSNumber *)yearsEmployed;
-//
-//-(NSString *)managerName;
-//-(void)setManagerName:(NSString *)managerName;
+-(NSString *)managerName;
+-(void)setManagerName:(NSString *)managerName;
 
 
 @end

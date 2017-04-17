@@ -15,6 +15,7 @@
     return stringArray;
 }
 
+
 +(NSString *)reverseString: (NSString *)string{
     NSMutableString* reversed = [NSMutableString stringWithCapacity:string.length];
     
@@ -24,10 +25,4 @@
     return reversed;
 }
 
-
 @end
-
-
-
-
-
