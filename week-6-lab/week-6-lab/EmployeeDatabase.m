@@ -26,6 +26,14 @@
     return shared;
 }
 
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        self.employees = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
 -(NSInteger)count{
     return [self.employees count];
 }
@@ -34,7 +42,7 @@
     return self.employees;
 }
 
--(Employee *)employeeAtIndex:(int)index{
+-(Employee *)employeeAtIndex:(NSInteger)index{
     return [self.employees objectAtIndex:index];
 }
 
@@ -46,7 +54,7 @@
     [self.employees removeObject:employee];
 }
 
--(void)removeEmployeeAtIndex:(int)index{
+-(void)removeEmployeeAtIndex:(NSInteger)index{
     [self.employees removeObjectAtIndex:index];
 }
 
