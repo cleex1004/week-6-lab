@@ -11,24 +11,21 @@
 
 @interface ViewController ()
 
-
 @end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //NSString *testString = @"This is the test string";
+    NSString *testString = @"This is the test string";
     
-    NSArray *testArray = [self selfArray:@"This is the test string"];
+    NSArray *testArray;
+    testArray = [testString selfArray:testString];
     NSLog(@"%@", testArray);
-    NSString *output = [self reverseString:@"This is the test string"];
+    NSString *output;
+    output = [NSString reverseString:@"This is the test string"];
     NSLog(@"%@", output);
 }
-
-//NSString *outputString;
-//outputString = [NSString reversed:@"Work Please"];
-//NSLog(@"%@", outputString);
-
 
 @end
