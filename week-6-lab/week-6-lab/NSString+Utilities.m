@@ -22,6 +22,8 @@
     for (int i = (int)string.length-1; i>= 0; i--){
         [reversed appendFormat:@"%c", [string characterAtIndex:i]];
     }
+    
+    NSLog(@"%@", reversed);
     return reversed;
 }
 

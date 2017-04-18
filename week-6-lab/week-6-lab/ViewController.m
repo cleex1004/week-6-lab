@@ -7,23 +7,28 @@
 //
 
 #import "ViewController.h"
+#import "NSString+Utilities.h"
 
 @interface ViewController ()
 
-@end
 
+@end
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //NSString *testString = @"This is the test string";
+    
+    NSArray *testArray = [self selfArray:@"This is the test string"];
+    NSLog(@"%@", testArray);
+    NSString *output = [self reverseString:@"This is the test string"];
+    NSLog(@"%@", output);
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+//NSString *outputString;
+//outputString = [NSString reversed:@"Work Please"];
+//NSLog(@"%@", outputString);
 
 
 @end
