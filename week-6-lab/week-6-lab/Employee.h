@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
-@interface Employee : Person
+@interface Employee : Person <NSCopying>
 
 -(NSNumber *)employeeNumber;
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber;
@@ -20,5 +20,6 @@
 -(NSString *)managerName;
 -(void)setManagerName:(NSString *)managerName;
 
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName Age:(NSNumber *)age yearsEmployed:(NSNumber *)yearsEmployed andManagerName:(NSString *)managerName;
 
 @end

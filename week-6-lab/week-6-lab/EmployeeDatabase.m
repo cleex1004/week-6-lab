@@ -8,7 +8,47 @@
 
 #import "EmployeeDatabase.h"
 
+@interface EmployeeDatabase ()
+
+@property(strong, nonatomic) NSArray *employees;
+
+@end
+
 @implementation EmployeeDatabase
+
++(instancetype)shared{
+    static EmployeeDatabase *shared = nil;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[[self class] alloc]init];
+    });
+    return shared;
+}
+
+-(NSInteger)count{
+    NSInteger *count = [[[EmployeeDatabase shared]employees]length];
+    return count;
+}
+-(NSArray *)allEmployees{
+    
+}
+-(Employee *)employeeAtIndex:(int)index{
+    
+}
+
+-(void)add:(Employee *)employee{
+    
+}
+-(void)remove:(Employee *)employee{
+    
+}
+-(void)removeEmployeeAtIndex:(int)index{
+    
+}
+-(void)removeAllEmployees{
+    
+}
 
 
 

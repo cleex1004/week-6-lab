@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Person : NSObject <NSCopying>
 
 -(NSString *)firstName;
 -(void)setFirstName:(NSString *)firstName;
@@ -18,5 +18,7 @@
 
 -(NSNumber *)age;
 -(void)setAge:(NSNumber *)age;
+
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName andAge:(NSNumber *)age;
 
 @end

@@ -7,9 +7,20 @@
 //
 
 #import "Employee.h"
-#import "Person.h"
 
-@implementation Employee : Person
+@implementation Employee
+
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName Age:(NSNumber *)age yearsEmployed:(NSNumber *)yearsEmployed andManagerName:(NSString *)managerName{
+    
+    self = [super initWithFirstName:firstName lastName:lastName andAge:age];
+    if(self){
+        _yearsEmployed = yearsEmployed;
+        _managerName = managerName;
+        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+    }
+    return self;
+}
+
 
 NSNumber *_employeeNumber;
 NSNumber *_yearsEmployed;
@@ -36,6 +47,15 @@ NSString *_managerName;
 }
 -(void)setManagerName:(NSString *)managerName{
     _managerName = managerName;
+}
+
+-(id)copyWithZone:(NSZone *)zone{
+    Employee *employee = [super copyWithZone:zone];
+    employee.employeeNumber = self.employeeNumber;
+    employee.managerName = self.managerName;
+    employee.yearsEmployed = self.yearsEmployed;
+    
+    return employee;
 }
 
 @end

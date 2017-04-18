@@ -99,10 +99,10 @@
 				BCAF0CD71EA56EF300995940 /* PersonQueue.h */,
 				BCAF0CCD1EA5654500995940 /* Person.h */,
 				BCAF0CCE1EA5654500995940 /* Person.m */,
-				BCA67F361EA687690013239E /* EmployeeDatabase.h */,
-				BCA67F371EA687690013239E /* EmployeeDatabase.m */,
 				BCAF0CD01EA5681A00995940 /* Employee.h */,
 				BCAF0CD11EA5681A00995940 /* Employee.m */,
+				BCA67F361EA687690013239E /* EmployeeDatabase.h */,
+				BCA67F371EA687690013239E /* EmployeeDatabase.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
