@@ -10,12 +10,13 @@
 
 @implementation Employee
 
--(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName Age:(NSNumber *)age yearsEmployed:(NSNumber *)yearsEmployed andManagerName:(NSString *)managerName{
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName Age:(NSNumber *)age yearsEmployed:(NSNumber *)yearsEmployed managerName:(NSString *)managerName andEmail:(NSString *)email{
     
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if(self){
         _yearsEmployed = yearsEmployed;
         _managerName = managerName;
+        _email = email;
         _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
     }
     return self;
@@ -25,6 +26,7 @@
 NSNumber *_employeeNumber;
 NSNumber *_yearsEmployed;
 NSString *_managerName;
+NSString *_email;
 
 -(NSNumber *)employeeNumber{
     return _employeeNumber;
@@ -49,11 +51,21 @@ NSString *_managerName;
     _managerName = managerName;
 }
 
+
+-(NSString *)email{
+    return _email;
+}
+-(void)setEmail:(NSString *)email{
+    _email = email;
+}
+
+
 -(id)copyWithZone:(NSZone *)zone{
     Employee *employee = [super copyWithZone:zone];
     employee.employeeNumber = self.employeeNumber;
     employee.managerName = self.managerName;
     employee.yearsEmployed = self.yearsEmployed;
+    employee.email = self.email;
     
     return employee;
 }

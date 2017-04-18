@@ -20,6 +20,9 @@
 -(NSString *)managerName;
 -(void)setManagerName:(NSString *)managerName;
 
--(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName Age:(NSNumber *)age yearsEmployed:(NSNumber *)yearsEmployed andManagerName:(NSString *)managerName;
+-(NSString *)email;
+-(void)setEmail:(NSString *)email;
+
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName Age:(NSNumber *)age yearsEmployed:(NSNumber *)yearsEmployed managerName:(NSString *)managerName andEmail:(NSString *)email;
 
 @end
