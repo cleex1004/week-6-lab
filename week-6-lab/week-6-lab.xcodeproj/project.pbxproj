@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCA67F381EA687690013239E /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA67F371EA687690013239E /* EmployeeDatabase.m */; };
 		BCAF0CB51EA55B9E00995940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CB41EA55B9E00995940 /* main.m */; };
 		BCAF0CB81EA55B9E00995940 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CB71EA55B9E00995940 /* AppDelegate.m */; };
 		BCAF0CBB1EA55B9E00995940 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CBA1EA55B9E00995940 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BCA67F361EA687690013239E /* EmployeeDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDatabase.h; sourceTree = "<group>"; };
+		BCA67F371EA687690013239E /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
 		BCAF0CB01EA55B9E00995940 /* week-6-lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week-6-lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAF0CB41EA55B9E00995940 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCAF0CB61EA55B9E00995940 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 				BCAF0CD91EA56F6000995940 /* controller */,
 				BCAF0CD81EA56F4400995940 /* model */,
 				BCAF0CDA1EA56F6D00995940 /* view */,
-				BCAF0CDB1EA56F7500995940 /* supporting */,
 				BCAF0CB31EA55B9E00995940 /* Supporting Files */,
 			);
 			path = "week-6-lab";
@@ -80,6 +82,10 @@
 		BCAF0CB31EA55B9E00995940 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BCAF0CB61EA55B9E00995940 /* AppDelegate.h */,
+				BCAF0CB71EA55B9E00995940 /* AppDelegate.m */,
+				BCAF0CBF1EA55B9E00995940 /* Assets.xcassets */,
+				BCAF0CC41EA55B9E00995940 /* Info.plist */,
 				BCAF0CB41EA55B9E00995940 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -93,6 +99,8 @@
 				BCAF0CD71EA56EF300995940 /* PersonQueue.h */,
 				BCAF0CCD1EA5654500995940 /* Person.h */,
 				BCAF0CCE1EA5654500995940 /* Person.m */,
+				BCA67F361EA687690013239E /* EmployeeDatabase.h */,
+				BCA67F371EA687690013239E /* EmployeeDatabase.m */,
 				BCAF0CD01EA5681A00995940 /* Employee.h */,
 				BCAF0CD11EA5681A00995940 /* Employee.m */,
 			);
@@ -102,8 +110,6 @@
 		BCAF0CD91EA56F6000995940 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				BCAF0CB61EA55B9E00995940 /* AppDelegate.h */,
-				BCAF0CB71EA55B9E00995940 /* AppDelegate.m */,
 				BCAF0CB91EA55B9E00995940 /* ViewController.h */,
 				BCAF0CBA1EA55B9E00995940 /* ViewController.m */,
 			);
@@ -117,15 +123,6 @@
 				BCAF0CC11EA55B9E00995940 /* LaunchScreen.storyboard */,
 			);
 			name = view;
-			sourceTree = "<group>";
-		};
-		BCAF0CDB1EA56F7500995940 /* supporting */ = {
-			isa = PBXGroup;
-			children = (
-				BCAF0CBF1EA55B9E00995940 /* Assets.xcassets */,
-				BCAF0CC41EA55B9E00995940 /* Info.plist */,
-			);
-			name = supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +203,7 @@
 				BCAF0CD21EA5681A00995940 /* Employee.m in Sources */,
 				BCAF0CCC1EA55E6B00995940 /* NSString+Utilities.m in Sources */,
 				BCAF0CB51EA55B9E00995940 /* main.m in Sources */,
+				BCA67F381EA687690013239E /* EmployeeDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +364,7 @@
 				BCAF0CC91EA55B9E00995940 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
