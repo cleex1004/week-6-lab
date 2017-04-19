@@ -23,7 +23,6 @@
         [reversed appendFormat:@"%c", [string characterAtIndex:i]];
     }
     
-    NSLog(@"%@", reversed);
     return reversed;
 }
 
