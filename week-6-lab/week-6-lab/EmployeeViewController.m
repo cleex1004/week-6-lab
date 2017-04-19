@@ -11,7 +11,7 @@
 
 @interface EmployeeViewController () <UITableViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UITableView *table;
+@property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
 
