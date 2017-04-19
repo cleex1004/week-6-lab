@@ -11,7 +11,7 @@
 
 @interface EmployeeViewController () <UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) IBOutlet UITableView *table;
 
 @end
 
@@ -20,9 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.table.dataSource = self;
-    Employee *adam = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" Age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows" ];
-    
+    Employee *adam = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows" ];
     [[EmployeeDatabase shared]add:adam];
+    
+
+    
+    Employee *erica = [[Employee alloc]initWithFirstName:@"Erica" lastName:@"Winberry" age:@30 yearsEmployed:@1 managerName:@"Adam" andEmail:@"erica@codefellows"];
+    [[EmployeeDatabase shared]add:erica];
+
+    
+    Employee *cathy = [[Employee alloc]initWithFirstName:@"Cathy" lastName:@"Oun" age:@25 yearsEmployed:@1 managerName:@"Adam" andEmail:@"cathy@codefellows"];
+    [[EmployeeDatabase shared]add:cathy];
+    
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
     //[self.table reloadData]; // write in setter
 }
@@ -32,8 +41,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = [[EmployeeDatabase shared]employeeAtIndex:indexPath.row].firstName;
+    UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
+    NSArray *array = [[EmployeeDatabase shared] allEmployees];
+    Employee *em = array[indexPath.row];
+    cell.textLabel.text = em.firstName;
     return cell;
 }
 

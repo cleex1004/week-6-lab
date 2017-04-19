@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Employee *original = [[Employee alloc] initWithFirstName:@"Adam" lastName:@"Wallraff" Age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows.com"];
+    Employee *original = [[Employee alloc] initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows.com"];
     
     Employee *newInstructor = [original copy];
     
