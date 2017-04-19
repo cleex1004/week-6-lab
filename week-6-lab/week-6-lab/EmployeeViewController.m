@@ -23,17 +23,22 @@
     
     
     
-    Employee *adam = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows" ];
-    [[EmployeeDatabase shared]add:adam];
-    
-    Employee *erica = [[Employee alloc]initWithFirstName:@"Erica" lastName:@"Winberry" age:@30 yearsEmployed:@1 managerName:@"Adam" andEmail:@"erica@codefellows"];
-    [[EmployeeDatabase shared]add:erica];
-    
-    Employee *cathy = [[Employee alloc]initWithFirstName:@"Cathy" lastName:@"Oun" age:@25 yearsEmployed:@1 managerName:@"Adam" andEmail:@"cathy@codefellows"];
-    [[EmployeeDatabase shared]add:cathy];
+//    Employee *adam = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows" ];
+//    [[EmployeeDatabase shared]add:adam];
+//    
+//    Employee *erica = [[Employee alloc]initWithFirstName:@"Erica" lastName:@"Winberry" age:@30 yearsEmployed:@1 managerName:@"Adam" andEmail:@"erica@codefellows"];
+//    [[EmployeeDatabase shared]add:erica];
+//    
+//    Employee *cathy = [[Employee alloc]initWithFirstName:@"Cathy" lastName:@"Oun" age:@25 yearsEmployed:@1 managerName:@"Adam" andEmail:@"cathy@codefellows"];
+//    [[EmployeeDatabase shared]add:cathy];
     
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
-    //[self.table reloadData]; // write in setter
+  
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.table reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -44,6 +49,7 @@
     UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
     cell.textLabel.text = [[EmployeeDatabase shared]employeeAtIndex:indexPath.row].firstName;
+    cell.textLabel.textColor = [UIColor colorWithRed:0.13 green:0.24 blue:0.58 alpha:1.0];
     return cell;
 }
 
