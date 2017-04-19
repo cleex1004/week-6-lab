@@ -21,7 +21,7 @@
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        shared = [[EmployeeDatabase alloc]init];
+//        shared = [[EmployeeDatabase alloc]init]; another way
         shared = [[[self class] alloc]init];
     });
     return shared;
@@ -30,9 +30,24 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        self.employees = [[NSMutableArray alloc]init];
+        _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:self.archiveURL]];
+        
+        if (! _employees) {
+            _employees = [[NSMutableArray alloc]init]; //better practice
+        }
+//        self.employees = [[NSMutableArray alloc]init]; //calls method does not access directly
     }
     return self;
+}
+
+-(void)save{
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:self.archiveURL.path];
+    
+    if (success) {
+        NSLog(@"saved Employees");
+    } else {
+        NSLog(@"save Failed");
+    }
 }
 
 -(NSInteger)count{
@@ -49,18 +64,22 @@
 
 -(void)add:(Employee *)employee{
     [self.employees addObject:employee];
+    [self save];
 }
 
 -(void)remove:(Employee *)employee{
     [self.employees removeObject:employee];
+    [self save];
 }
 
 -(void)removeEmployeeAtIndex:(NSInteger)index{
     [self.employees removeObjectAtIndex:index];
+    [self save];
 }
 
 -(void)removeAllEmployees{
     [self.employees removeAllObjects];
+    [self save];
 }
 
 

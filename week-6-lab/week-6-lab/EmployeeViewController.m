@@ -20,14 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.table.dataSource = self;
+    
+    
+    
     Employee *adam = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows" ];
     [[EmployeeDatabase shared]add:adam];
     
-
-    
     Employee *erica = [[Employee alloc]initWithFirstName:@"Erica" lastName:@"Winberry" age:@30 yearsEmployed:@1 managerName:@"Adam" andEmail:@"erica@codefellows"];
     [[EmployeeDatabase shared]add:erica];
-
     
     Employee *cathy = [[Employee alloc]initWithFirstName:@"Cathy" lastName:@"Oun" age:@25 yearsEmployed:@1 managerName:@"Adam" andEmail:@"cathy@codefellows"];
     [[EmployeeDatabase shared]add:cathy];

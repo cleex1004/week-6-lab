@@ -10,13 +10,13 @@
 
 @interface Person : NSObject <NSCopying>
 
-//{
-//    NSString *_firstName;
-//}
-
 @property (strong, nonatomic) NSString *firstName;
 @property (strong, nonatomic) NSString *lastName;
 @property (strong, nonatomic) NSNumber *age;
+
+//{
+//    NSString *_firstName;
+//}
 
 //-(NSString *)firstName;
 //-(void)setFirstName:(NSString *)firstName;
