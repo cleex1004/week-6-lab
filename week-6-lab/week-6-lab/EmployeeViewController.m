@@ -43,9 +43,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
-    NSArray *array = [[EmployeeDatabase shared] allEmployees];
-    Employee *em = array[indexPath.row];
-    cell.textLabel.text = em.firstName;
+    cell.textLabel.text = [[EmployeeDatabase shared]employeeAtIndex:indexPath.row].firstName;
     return cell;
 }
 
