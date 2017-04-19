@@ -33,7 +33,12 @@
 }
 
 - (IBAction)saveButton:(UIButton *)sender {
-    Employee *newEmployee = [[Employee alloc]initWithFirstName:_firstName.text lastName:_lastName.text age:_age.text yearsEmployed:_yearsEmployed.text managerName:_managerName.text andEmail:_email.text];
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *age = [f numberFromString:self.age.text];
+    NSNumber *yearsEmployed = [f numberFromString:self.yearsEmployed.text];
+    
+    Employee *newEmployee = [[Employee alloc]initWithFirstName:self.firstName.text lastName:self.lastName.text age:age yearsEmployed:yearsEmployed managerName:self.managerName.text andEmail:self.email.text];
     [[EmployeeDatabase shared]add:newEmployee];
 //    [self performSegueWithIdentifier:@"EmployeeViewController" sender:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
