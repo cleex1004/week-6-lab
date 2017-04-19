@@ -10,10 +10,10 @@
 
 @implementation Employee
 
-NSNumber *_employeeNumber;
-NSNumber *_yearsEmployed;
-NSString *_managerName;
-NSString *_email;
+//NSNumber *_employeeNumber;
+//NSNumber *_yearsEmployed;
+//NSString *_managerName;
+//NSString *_email;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -31,37 +31,37 @@ NSString *_email;
     }
     return self;
 }
-
--(NSNumber *)employeeNumber{
-    return _employeeNumber;
-}
--(void)setEmployeeNumber:(NSNumber *)employeeNumber{
-    _employeeNumber = employeeNumber;
-}
-
-
--(NSNumber *)yearsEmployed{
-    return _yearsEmployed;
-}
--(void)setYearsEmployed:(NSNumber *)yearsEmployed{
-    _yearsEmployed = yearsEmployed;
-}
-
-
--(NSString *)managerName{
-    return _managerName;
-}
--(void)setManagerName:(NSString *)managerName{
-    _managerName = managerName;
-}
-
-
--(NSString *)email{
-    return _email;
-}
--(void)setEmail:(NSString *)email{
-    _email = email;
-}
+//
+//-(NSNumber *)employeeNumber{
+//    return _employeeNumber;
+//}
+//-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+//    _employeeNumber = employeeNumber;
+//}
+//
+//
+//-(NSNumber *)yearsEmployed{
+//    return _yearsEmployed;
+//}
+//-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
+//    _yearsEmployed = yearsEmployed;
+//}
+//
+//
+//-(NSString *)managerName{
+//    return _managerName;
+//}
+//-(void)setManagerName:(NSString *)managerName{
+//    _managerName = managerName;
+//}
+//
+//
+//-(NSString *)email{
+//    return _email;
+//}
+//-(void)setEmail:(NSString *)email{
+//    _email = email;
+//}
 
 
 -(id)copyWithZone:(NSZone *)zone{

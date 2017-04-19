@@ -23,30 +23,30 @@
     return self;
 }
 
-NSString *_firstName;
-NSString *_lastName;
-NSNumber *_age;
-
--(NSString *)firstName{
-    return _firstName;
-}
--(void)setFirstName:(NSString *)firstName{
-    _firstName = firstName;
-}
-
--(NSString *)lastName{
-    return _lastName;
-}
--(void)setLastName:(NSString *)lastName{
-    _lastName = lastName;
-}
-
--(NSNumber *)age{
-    return _age;
-}
--(void)setAge:(NSNumber *)age{
-    _age = age;
-}
+//NSString *_firstName;
+//NSString *_lastName;
+//NSNumber *_age;
+//
+//-(NSString *)firstName{
+//    return _firstName;
+//}
+//-(void)setFirstName:(NSString *)firstName{
+//    _firstName = firstName;
+//}
+//
+//-(NSString *)lastName{
+//    return _lastName;
+//}
+//-(void)setLastName:(NSString *)lastName{
+//    _lastName = lastName;
+//}
+//
+//-(NSNumber *)age{
+//    return _age;
+//}
+//-(void)setAge:(NSNumber *)age{
+//    _age = age;
+//}
 
 -(id)copyWithZone:(NSZone *)zone{
     Person *person = [[[self class]alloc]init];
