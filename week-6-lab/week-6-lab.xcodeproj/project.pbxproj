@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC7D617F1EA807B000DEE22B /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7D617E1EA807B000DEE22B /* AddEmployeeViewController.m */; };
 		BC9DE81D1EA6B77800B0C18F /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9DE81C1EA6B77800B0C18F /* EmployeeViewController.m */; };
 		BCA67F381EA687690013239E /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA67F371EA687690013239E /* EmployeeDatabase.m */; };
 		BCAF0CB51EA55B9E00995940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CB41EA55B9E00995940 /* main.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC7D617D1EA807B000DEE22B /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
+		BC7D617E1EA807B000DEE22B /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 		BC9DE81B1EA6B77800B0C18F /* EmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
 		BC9DE81C1EA6B77800B0C18F /* EmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
 		BCA67F361EA687690013239E /* EmployeeDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDatabase.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		BCAF0CD91EA56F6000995940 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC7D617D1EA807B000DEE22B /* AddEmployeeViewController.h */,
+				BC7D617E1EA807B000DEE22B /* AddEmployeeViewController.m */,
 				BC9DE81B1EA6B77800B0C18F /* EmployeeViewController.h */,
 				BC9DE81C1EA6B77800B0C18F /* EmployeeViewController.m */,
 				BCAF0CB91EA55B9E00995940 /* ViewController.h */,
@@ -210,6 +215,7 @@
 				BCAF0CCC1EA55E6B00995940 /* NSString+Utilities.m in Sources */,
 				BCAF0CB51EA55B9E00995940 /* main.m in Sources */,
 				BCA67F381EA687690013239E /* EmployeeDatabase.m in Sources */,
+				BC7D617F1EA807B000DEE22B /* AddEmployeeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,9 @@
 
 @implementation Person
 
+//NSString *_firstName;
+//NSString *_lastName;
+//NSNumber *_age;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -23,10 +26,6 @@
     return self;
 }
 
-//NSString *_firstName;
-//NSString *_lastName;
-//NSNumber *_age;
-//
 //-(NSString *)firstName{
 //    return _firstName;
 //}
