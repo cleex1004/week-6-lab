@@ -17,8 +17,8 @@
 		BCAF0CC01EA55B9E00995940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCAF0CBF1EA55B9E00995940 /* Assets.xcassets */; };
 		BCAF0CC31EA55B9E00995940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAF0CC11EA55B9E00995940 /* LaunchScreen.storyboard */; };
 		BCAF0CCC1EA55E6B00995940 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CCB1EA55E6B00995940 /* NSString+Utilities.m */; };
-		BCAF0CCF1EA5654500995940 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CCE1EA5654500995940 /* Person.m */; };
-		BCAF0CD21EA5681A00995940 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CD11EA5681A00995940 /* Employee.m */; };
+		BCAF0CCF1EA5654500995940 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CCE1EA5654500995940 /* Person.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BCAF0CD21EA5681A00995940 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF0CD11EA5681A00995940 /* Employee.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
