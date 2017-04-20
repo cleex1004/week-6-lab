@@ -40,7 +40,7 @@
     
     Employee *newEmployee = [[Employee alloc]initWithFirstName:self.firstName.text lastName:self.lastName.text age:age yearsEmployed:yearsEmployed managerName:self.managerName.text andEmail:self.email.text];
     [[EmployeeDatabase shared]add:newEmployee];
-//    [self performSegueWithIdentifier:@"EmployeeViewController" sender:nil];
+
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
@@ -48,23 +48,6 @@
 - (IBAction)cancelButton:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-//-(void)textFieldDidBeginEditing:(UITextField *)textField{
-//    
-//}
-//
-//-(void)textFieldDidEndEditing:(UITextField *)textField{
-//    
-//}
-//
-//-(BOOL)textFieldShouldReturn:(UITextField *)textField{
-//    [textField resignFirstResponder];
-//    return YES;
-//    
-//}
-
-//Employee *adam = [[Employee alloc]initWithFirstName:@"Adam" lastName:@"Wallraff" age:@30 yearsEmployed:@2 managerName:@"Brook" andEmail:@"adam@codefellows" ];
-//[[EmployeeDatabase shared]add:adam];
 
 
 

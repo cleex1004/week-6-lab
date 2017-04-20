@@ -14,18 +14,6 @@
 @property (strong, nonatomic) NSString *lastName;
 @property (strong, nonatomic) NSNumber *age;
 
-//{
-//    NSString *_firstName;
-//}
-
-//-(NSString *)firstName;
-//-(void)setFirstName:(NSString *)firstName;
-//
-//-(NSString *)lastName;
-//-(void)setLastName:(NSString *)lastName;
-//
-//-(NSNumber *)age;
-//-(void)setAge:(NSNumber *)age;
 
 -(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName andAge:(NSNumber *)age;
 
