@@ -24,10 +24,12 @@ NSString *_email;
     
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if(self){
-        _yearsEmployed = yearsEmployed;
-        _managerName = managerName;
-        _email = email;
+        
         _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+        _yearsEmployed = [yearsEmployed retain];
+        _managerName = [managerName retain];
+        _email = [email retain];
+        
     }
     return self;
 }
@@ -129,3 +131,4 @@ NSString *_email;
 }
 
 @end
+
