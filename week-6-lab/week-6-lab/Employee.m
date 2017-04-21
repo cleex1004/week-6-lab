@@ -1,4 +1,4 @@
-//
+    //
 //  Employee.m
 //  week-6-lab
 //
@@ -10,10 +10,10 @@
 
 @implementation Employee
 
-//NSNumber *_employeeNumber;
-//NSNumber *_yearsEmployed;
-//NSString *_managerName;
-//NSString *_email;
+NSNumber *_employeeNumber;
+NSNumber *_yearsEmployed;
+NSString *_managerName;
+NSString *_email;
 
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
@@ -24,13 +24,74 @@
     
     self = [super initWithFirstName:firstName lastName:lastName andAge:age];
     if(self){
-        _yearsEmployed = yearsEmployed;
-        _managerName = managerName;
-        _email = email;
+        
         _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+        _yearsEmployed = [yearsEmployed retain];
+        _managerName = [managerName retain];
+        _email = [email retain];
+        
     }
     return self;
 }
+
+-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
+    if(_employeeNumber != employeeNumber){
+        
+        [employeeNumber retain];
+        [_employeeNumber release];
+        
+        _employeeNumber = employeeNumber;
+    }}
+-(NSNumber *)employeeNumber{
+    return _employeeNumber;
+}
+
+-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
+    if(_yearsEmployed != yearsEmployed){
+        
+        [yearsEmployed retain];
+        [_yearsEmployed release];
+        
+        _yearsEmployed = yearsEmployed;
+    }}
+-(NSNumber *)yearsEmployed{
+    return _yearsEmployed;
+}
+
+-(void)setManagerName:(NSString *)managerName{
+    if(_managerName != managerName){
+        
+        [managerName retain];
+        [_managerName release];
+        
+        _managerName = managerName;
+    }}
+-(NSString *)managerName{
+    return _managerName;
+}
+
+-(void)setEmail:(NSString *)email{
+    if(_email != email){
+        
+        [email retain];
+        [_email release];
+        
+        _email = email;
+    }
+}
+-(NSString *)email{
+    return _email;
+}
+
+-(void)dealloc{
+    [_employeeNumber release];
+    [_yearsEmployed release];
+    [_managerName release];
+    [_email release];
+    
+    [super dealloc];
+}
+
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super init];
@@ -58,34 +119,6 @@
     [aCoder encodeObject:self.email forKey:@"email"];
 }
 
-//-(NSNumber *)employeeNumber{
-//    return _employeeNumber;
-//}
-//-(void)setEmployeeNumber:(NSNumber *)employeeNumber{
-//    _employeeNumber = employeeNumber;
-//}
-//
-//-(NSNumber *)yearsEmployed{
-//    return _yearsEmployed;
-//}
-//-(void)setYearsEmployed:(NSNumber *)yearsEmployed{
-//    _yearsEmployed = yearsEmployed;
-//}
-//
-//-(NSString *)managerName{
-//    return _managerName;
-//}
-//-(void)setManagerName:(NSString *)managerName{
-//    _managerName = managerName;
-//}
-//
-//-(NSString *)email{
-//    return _email;
-//}
-//-(void)setEmail:(NSString *)email{
-//    _email = email;
-//}
-
 
 -(id)copyWithZone:(NSZone *)zone{
     Employee *employee = [super copyWithZone:zone];
@@ -98,3 +131,4 @@
 }
 
 @end
+
