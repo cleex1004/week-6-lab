@@ -9,7 +9,6 @@
 #import "EmployeeViewController.h"
 #import "EmployeeDatabase.h"
 
-static void *countContext = &countContext;
 
 @interface EmployeeViewController () <UITableViewDataSource>
 
