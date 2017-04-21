@@ -9,6 +9,8 @@
 #import "EmployeeViewController.h"
 #import "EmployeeDatabase.h"
 
+static void *countContext = &countContext;
+
 @interface EmployeeViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
@@ -20,15 +22,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.table.dataSource = self;
-
-    
     NSLog(@"%@", [[EmployeeDatabase shared] allEmployees]);
+    [[EmployeeDatabase shared] addObserver:self forKeyPath:@"employees" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueChangeInsertion | NSKeyValueChangeRemoval context:nil];
   
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.table reloadData];
+-(void)dealloc{
+    [[EmployeeDatabase shared] removeObserver:self forKeyPath:@"employees"];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change
+                      context:(void *)context{
+    
+    if ([keyPath isEqualToString:@"employees"]) {
+        [self.table reloadData];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
