@@ -19,9 +19,9 @@ NSNumber *_age;
                           andAge:(NSNumber *)age{
     self = [super init];
     if (self) {
-        _firstName = firstName;
-        _lastName = lastName;
-        _age = age;
+        _firstName = [firstName retain];
+        _lastName = [lastName retain];
+        _age = [age retain];
     }
     return self;
 }
@@ -85,10 +85,4 @@ NSNumber *_age;
 
 @end
 
-//-(NSString *)description{
-//    NSString *description = [[[NSString alloc]initWithFormat:@"%@", self.name]autorelease];
-//    
-//    return description;
-//    
-//}
 
